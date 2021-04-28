@@ -117,7 +117,7 @@ plt.show()
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 y = iris.target
 # 构建并训练LDA模型
-lda = LinearDiscriminantAnalysis(n_components=2).fit(x, y)
+lda = LinearDiscriminantAnalysis(n_components=2).fit(x,y)
 print('LDA模型为：\n', lda)
 
 # 构建并训练PCA模型
