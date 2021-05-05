@@ -76,7 +76,7 @@ print('最终每个类别的数目为：\n', r1)
 
 
 # 代码 7-7
-%matplotlib inline
+# matplotlib inline
 import matplotlib.pyplot as plt
 
 # 中文和负号的正常显示
@@ -100,6 +100,8 @@ for i in range(len(kmeans_model.cluster_centers_)):
     values = kmeans_model.cluster_centers_[i]
     feature = ['R','F','M']
     values = np.concatenate((values, [values[0]]))
+    feature = np.concatenate((feature, [feature[0]]))
+
     # 绘制折线图
     ax.plot(angles, values, sam[i], linestyle=lstype[i], linewidth=2, markersize=10)
     ax.fill(angles, values, alpha=0.5)  # 填充颜色
