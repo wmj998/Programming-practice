@@ -1,7 +1,8 @@
 # 代码 7-4
+
+import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-import numpy as np
 
 info = pd.read_csv('../tmp/info_august_new.csv', encoding='utf-8')
 user = pd.read_csv('../tmp/users_august.csv', encoding='utf-8')
@@ -93,12 +94,12 @@ angles = np.concatenate((angles, [angles[0]]))
 # 绘图
 fig = plt.figure(figsize=(7, 7))
 ax = fig.add_subplot(111, polar=True)
-sam = ['r','g','b']
-lstype = ['-','--','-.']
+sam = ['r', 'g', 'b']
+lstype = ['-', '--', '-.']
 lab = []
 for i in range(len(kmeans_model.cluster_centers_)):
     values = kmeans_model.cluster_centers_[i]
-    feature = ['R','F','M']
+    feature = ['R', 'F', 'M']
     values = np.concatenate((values, [values[0]]))
     feature = np.concatenate((feature, [feature[0]]))
 
