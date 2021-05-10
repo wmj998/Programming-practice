@@ -57,6 +57,7 @@ print(info_user_new.head())
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier as DTC
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 
 # 划分测试集、训练集
 info_user = pd.read_csv('../tmp/info_user_clear.csv', encoding='gbk')
@@ -89,3 +90,6 @@ print('召回率：', round(R, 3))
 # F1值
 F1 = 2 * P * R / (P + R)
 print('F1值：', round(F1, 3))
+
+
+print('预测报告为：\n', classification_report(y_te, pre))
