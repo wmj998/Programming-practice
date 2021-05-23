@@ -1,6 +1,7 @@
 # 代码 5-11
 import numpy as np
 import matplotlib.pyplot as plt
+
 plt.rcParams['font.sans-serif'] = 'SimHei'
 plt.rcParams['axes.unicode_minus'] = False
 plt.figure(figsize=(8, 6), dpi=100)
@@ -11,7 +12,6 @@ plt.hist(x, bins=20, density=True, rwidth=0.96)  # 绘制直方图
 plt.title('标准正态分布数据直方图')
 plt.savefig('../tmp/标准正态分布数据直方图.png')
 # plt.show()
-
 
 
 # 代码 5-12
@@ -30,7 +30,6 @@ plt.ylim([0, 500000])
 plt.title('2016年各产业国民生产总值条形图')
 plt.savefig('../tmp/2016年各产业国民生产总值条形图.png')
 # plt.show()
-
 
 
 # 代码 5-13
@@ -54,7 +53,6 @@ plt.pie(np.sum(values[-2: -6: -1, 3: 6], axis=0), autopct='%1.1f%%',
 plt.title('2016年产业结构')
 plt.savefig('../tmp/2000到2016产业结构变化饼图.png')
 # plt.show()
-
 
 
 # 代码 5-14

@@ -1,6 +1,7 @@
 # 代码 5-1
 import matplotlib.pyplot as plt
 import numpy as np
+
 fig = plt.figure(figsize=(6, 6), dpi=80)  # 创建画布。大小为6×6，像素为80
 x = np.linspace(0, 1, 1000)
 fig.add_subplot(2, 1, 1)  # 分为2×1图形阵，选择第1张图片绘图
@@ -16,7 +17,6 @@ plt.plot(x, x)
 plt.legend(['y=x^2', 'y=x'])  # 添加图例
 plt.savefig('../tmp/整体流程绘图.png')  # 保存图片
 plt.show()
-
 
 
 # 代码 5-2
@@ -43,8 +43,6 @@ ax2.text(x[4], y2[4], 'y=sin(x)')  # 在子图2添加‘y=sin（x）’
 plt.savefig('../tmp/自编函数绘图并添加文本.png')
 plt.show()
 
-
-
 # 代码 5-3
 print('Matplotlib中预设风格为：\n', plt.style.available)
 
@@ -57,10 +55,9 @@ plt.legend(['y=x^2', 'y=x'])  # 添加图例
 plt.savefig('../tmp/plt风格.png')  # 保存图片
 plt.show()
 
-
-
 # 代码 5-4
 import matplotlib as mpl
+
 pic = plt.figure(dpi=80, figsize=(6, 6))
 x = np.linspace(0, 1, 1000)
 
@@ -94,8 +91,6 @@ plt.title('y = x^2')
 plt.savefig('../tmp/线条rc参数对比.png')
 plt.show()
 
-
-
 # 代码 5-5
 x = np.linspace(0, 10, 1000)
 plt.plot(x, np.sin(x))
@@ -109,8 +104,6 @@ plt.rcParams['axes.spines.right'] = False  # 去除右侧轴
 plt.rcParams['axes.xmargin'] = 0.1  # x轴余留为区间长度的0.1倍
 plt.plot(x, np.sin(x))
 plt.show()
-
-
 
 # 代码 5-6
 # 原图
