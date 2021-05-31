@@ -6,7 +6,7 @@ Python机器学习编程与实战
 
 - ### chapter 2
 
-  numapy
+  numpy
 
 - ### chapter 3
 
